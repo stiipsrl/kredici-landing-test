@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kredici - Richiedi un prestito personale</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        .gradient-bg {
+            background: linear-gradient(to right, #1a237e, #3949ab);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="gradient-bg text-white shadow-lg">
+        <div class="container mx-auto px-4 py-6">
+            <div class="flex justify-between items-center">
+                <div class="text-2xl font-bold">Kredici</div>
+                <nav class="hidden md:block">
+                    <ul class="flex space-x-6">
+                        <li><a href="#" class="hover:text-blue-200">Home</a></li>
+                        <li><a href="#" class="hover:text-blue-200">Prestiti</a></li>
+                        <li><a href="#" class="hover:text-blue-200">Chi siamo</a></li>
+                        <li><a href="#" class="hover:text-blue-200">Contatti</a></li>
+                    </ul>
+                </nav>
+                <button class="md:hidden text-xl">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="pt-10 pb-6 md:pt-14 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0">
+                    <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-4">
+                        Ottieni il prestito che ti serve, quando ne hai bisogno
+                    </h1>
+                    <p class="text-lg text-gray-600 mb-6">
+                        Da Kredici puoi richiedere un prestito personale con condizioni vantaggiose e risposta rapida.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#richiedi-info" class="px-6 py-3 bg-blue-600 text-white rounded-md shadow-md hover:bg-blue-700 transition">
+                            Richiedi informazioni
+                        </a>
+                        <a href="#" class="px-6 py-3 border border-blue-600 text-blue-600 rounded-md hover:bg-blue-50 transition">
+                            Scopri di più
+                        </a>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <img src="https://www.kredici.it/wp-content/uploads/2022/09/KREDICI-SENZA-OMINI-E-SLOGAN-Copia-_2_.svg" alt="Kredici prestiti personali" class="rounded-lg mx-auto">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Form Section -->
+    <section id="richiedi-info" class="py-6 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-2xl mx-auto bg-white p-8 rounded-lg shadow-md border border-gray-200">
+                <h2 class="text-2xl md:text-3xl font-bold text-center mb-8">Richiedi informazioni</h2>
+                <p class="text-gray-600 text-center mb-8">Compila il modulo per ricevere maggiori informazioni sui nostri prestiti personali.</p>
+                
+                <form id="leadForm" class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="nome" class="block text-sm font-medium text-gray-700 mb-1">Nome*</label>
+                            <input type="text" id="nome" name="nome" required 
+                                class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500">
+                        </div>
+                        <div>
+                            <label for="cognome" class="block text-sm font-medium text-gray-700 mb-1">Cognome*</label>
+                            <input type="text" id="cognome" name="cognome" required 
+                                class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="occupazione" class="block text-sm font-medium text-gray-700 mb-1">Occupazione*</label>
+                        <select id="occupazione" name="occupazione" required 
+                            class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500">
+                            <option value="" disabled selected>Seleziona la tua occupazione</option>
+                            <option value="dipendente_tempo_indeterminato">Dipendente Tempo Indeterminato</option>
+                            <option value="dipendente_tempo_determinaro">Dipendente Tempo Determinato</option>
+                            <option value="libero_professionista">Libero Professionista</option>
+                            <option value="dipendente_pubblico">Dipendente Pubblico</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="telefono" class="block text-sm font-medium text-gray-700 mb-1">Numero di telefono*</label>
+                        <input type="tel" id="telefono" name="telefono" required 
+                            class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500">
+                    </div>
+
+                    <div>
+                        <label for="provincia" class="block text-sm font-medium text-gray-700 mb-1">Provincia*</label>
+                        <select id="provincia" name="provincia" required 
+                            class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500">
+                            <option value="" disabled selected>Seleziona la provincia</option>
+                        </select>
+                    </div>
+
+                    <div class="flex items-start">
+                        <input type="checkbox" id="privacy" name="privacy" required class="mt-1 h-4 w-4 text-blue-600 border-gray-300 rounded">
+                        <label for="privacy" class="ml-2 block text-sm text-gray-700">
+                            Ho letto e accetto la <a href="#" class="text-blue-600 hover:underline">Privacy Policy</a> e autorizzo il trattamento dei miei dati personali.*
+                        </label>
+                    </div>
+
+                    <div>
+                        <button type="submit" id="submitBtn" class="w-full py-3 px-4 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-md shadow-sm transition">
+                            Invia richiesta
+                        </button>
+                    </div>
+                </form>
+                <div id="formResponse" class="mt-4 py-3 px-4 rounded-md hidden"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="py-12 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-2xl md:text-3xl font-bold text-center mb-12">Perché scegliere Kredici</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="text-blue-600 text-3xl mb-4">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Risposta rapida</h3>
+                    <p class="text-gray-600">Valutazione della richiesta in tempi brevi e risposta in 24-48 ore.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="text-blue-600 text-3xl mb-4">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Tassi competitivi</h3>
+                    <p class="text-gray-600">Offriamo tassi di interesse competitivi adatti alle tue esigenze.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="text-blue-600 text-3xl mb-4">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Massima sicurezza</h3>
+                    <p class="text-gray-600">I tuoi dati sono protetti con i più alti standard di sicurezza.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Kredici</h3>
+                    <p class="text-gray-400">Soluzioni di prestito personale su misura per te.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Link utili</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Home</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Prestiti</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Chi siamo</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Contatti</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Contatti</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><i class="fas fa-envelope mr-2"></i> info@kredici.it</li>
+                        <li><i class="fas fa-phone mr-2"></i> +39 02 1234567</li>
+                        <li><i class="fas fa-map-marker-alt mr-2"></i> Milano, Italia</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Seguici</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-6 border-gray-700">
+            <p class="text-center text-gray-400 text-sm">© 2025 Kredici. Tutti i diritti riservati. <span class="text-xs">Questa è una pagina di test.</span></p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Popolare la lista delle province italiane
+            const province = [
+                {nome: "Agrigento", sigla: "AG"},
+                {nome: "Alessandria", sigla: "AL"},
+                {nome: "Ancona", sigla: "AN"},
+                {nome: "Aosta", sigla: "AO"},
+                {nome: "Arezzo", sigla: "AR"},
+                {nome: "Ascoli Piceno", sigla: "AP"},
+                {nome: "Asti", sigla: "AT"},
+                {nome: "Avellino", sigla: "AV"},
+                {nome: "Bari", sigla: "BA"},
+                {nome: "Barletta-Andria-Trani", sigla: "BT"},
+                {nome: "Belluno", sigla: "BL"},
+                {nome: "Benevento", sigla: "BN"},
+                {nome: "Bergamo", sigla: "BG"},
+                {nome: "Biella", sigla: "BI"},
+                {nome: "Bologna", sigla: "BO"},
+                {nome: "Bolzano", sigla: "BZ"},
+                {nome: "Brescia", sigla: "BS"},
+                {nome: "Brindisi", sigla: "BR"},
+                {nome: "Cagliari", sigla: "CA"},
+                {nome: "Caltanissetta", sigla: "CL"},
+                {nome: "Campobasso", sigla: "CB"},
+                {nome: "Carbonia-Iglesias", sigla: "CI"},
+                {nome: "Caserta", sigla: "CE"},
+                {nome: "Catania", sigla: "CT"},
+                {nome: "Catanzaro", sigla: "CZ"},
+                {nome: "Chieti", sigla: "CH"},
+                {nome: "Como", sigla: "CO"},
+                {nome: "Cosenza", sigla: "CS"},
+                {nome: "Cremona", sigla: "CR"},
+                {nome: "Crotone", sigla: "KR"},
+                {nome: "Cuneo", sigla: "CN"},
+                {nome: "Enna", sigla: "EN"},
+                {nome: "Fermo", sigla: "FM"},
+                {nome: "Ferrara", sigla: "FE"},
+                {nome: "Firenze", sigla: "FI"},
+                {nome: "Foggia", sigla: "FG"},
+                {nome: "Forlì-Cesena", sigla: "FC"},
+                {nome: "Frosinone", sigla: "FR"},
+                {nome: "Genova", sigla: "GE"},
+                {nome: "Gorizia", sigla: "GO"},
+                {nome: "Grosseto", sigla: "GR"},
+                {nome: "Imperia", sigla: "IM"},
+                {nome: "Isernia", sigla: "IS"},
+                {nome: "La Spezia", sigla: "SP"},
+                {nome: "L'Aquila", sigla: "AQ"},
+                {nome: "Latina", sigla: "LT"},
+                {nome: "Lecce", sigla: "LE"},
+                {nome: "Lecco", sigla: "LC"},
+                {nome: "Livorno", sigla: "LI"},
+                {nome: "Lodi", sigla: "LO"},
+                {nome: "Lucca", sigla: "LU"},
+                {nome: "Macerata", sigla: "MC"},
+                {nome: "Mantova", sigla: "MN"},
+                {nome: "Massa-Carrara", sigla: "MS"},
+                {nome: "Matera", sigla: "MT"},
+                {nome: "Messina", sigla: "ME"},
+                {nome: "Milano", sigla: "MI"},
+                {nome: "Modena", sigla: "MO"},
+                {nome: "Monza e Brianza", sigla: "MB"},
+                {nome: "Napoli", sigla: "NA"},
+                {nome: "Novara", sigla: "NO"},
+                {nome: "Nuoro", sigla: "NU"},
+                {nome: "Ogliastra", sigla: "OG"},
+                {nome: "Olbia-Tempio", sigla: "OT"},
+                {nome: "Oristano", sigla: "OR"},
+                {nome: "Padova", sigla: "PD"},
+                {nome: "Palermo", sigla: "PA"},
+                {nome: "Parma", sigla: "PR"},
+                {nome: "Pavia", sigla: "PV"},
+                {nome: "Perugia", sigla: "PG"},
+                {nome: "Pesaro e Urbino", sigla: "PU"},
+                {nome: "Pescara", sigla: "PE"},
+                {nome: "Piacenza", sigla: "PC"},
+                {nome: "Pisa", sigla: "PI"},
+                {nome: "Pistoia", sigla: "PT"},
+                {nome: "Pordenone", sigla: "PN"},
+                {nome: "Potenza", sigla: "PZ"},
+                {nome: "Prato", sigla: "PO"},
+                {nome: "Ragusa", sigla: "RG"},
+                {nome: "Ravenna", sigla: "RA"},
+                {nome: "Reggio Calabria", sigla: "RC"},
+                {nome: "Reggio Emilia", sigla: "RE"},
+                {nome: "Rieti", sigla: "RI"},
+                {nome: "Rimini", sigla: "RN"},
+                {nome: "Roma", sigla: "RM"},
+                {nome: "Rovigo", sigla: "RO"},
+                {nome: "Salerno", sigla: "SA"},
+                {nome: "Medio Campidano", sigla: "VS"},
+                {nome: "Sassari", sigla: "SS"},
+                {nome: "Savona", sigla: "SV"},
+                {nome: "Siena", sigla: "SI"},
+                {nome: "Siracusa", sigla: "SR"},
+                {nome: "Sondrio", sigla: "SO"},
+                {nome: "Taranto", sigla: "TA"},
+                {nome: "Teramo", sigla: "TE"},
+                {nome: "Terni", sigla: "TR"},
+                {nome: "Torino", sigla: "TO"},
+                {nome: "Trapani", sigla: "TP"},
+                {nome: "Trento", sigla: "TN"},
+                {nome: "Treviso", sigla: "TV"},
+                {nome: "Trieste", sigla: "TS"},
+                {nome: "Udine", sigla: "UD"},
+                {nome: "Varese", sigla: "VA"},
+                {nome: "Venezia", sigla: "VE"},
+                {nome: "Verbano-Cusio-Ossola", sigla: "VB"},
+                {nome: "Vercelli", sigla: "VC"},
+                {nome: "Verona", sigla: "VR"},
+                {nome: "Vibo Valentia", sigla: "VV"},
+                {nome: "Vicenza", sigla: "VI"},
+                {nome: "Viterbo", sigla: "VT"}
+            ];
+
+            const selectProvincia = document.getElementById('provincia');
+            province.forEach(function(provincia) {
+                const option = document.createElement('option');
+                option.value = provincia.sigla;
+                option.textContent = `${provincia.nome} (${provincia.sigla})`;
+                selectProvincia.appendChild(option);
+            });
+
+            // Gestione del form
+            const form = document.getElementById('leadForm');
+            const formResponse = document.getElementById('formResponse');
+            const submitBtn = document.getElementById('submitBtn');
+
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Disabilita il pulsante durante l'invio
+                submitBtn.disabled = true;
+                submitBtn.textContent = 'Invio in corso...';
+                
+                // Raccogli i dati del form
+                const formData = {
+                    name: document.getElementById('nome').value,
+                    surname: document.getElementById('cognome').value,
+                    customfield_2: document.getElementById('occupazione').value,
+                    primary_telephone: document.getElementById('telefono').value,
+                    province: document.getElementById('provincia').value
+                };
+                
+                // Invia i dati all'API
+                fetch('https://still-grubworm-factually.ngrok-free.app/api/public/leads', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'X-API-Token': '1234567890'
+                        },
+                        body: JSON.stringify(formData)
+                    })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Errore nella richiesta');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    // Mostra messaggio di successo
+                    formResponse.classList.remove('hidden', 'bg-red-100', 'text-red-700');
+                    formResponse.classList.add('bg-green-100', 'text-green-700');
+                    formResponse.textContent = 'Grazie! La tua richiesta è stata inviata con successo. Ti contatteremo presto.';
+                    
+                    // Reset del form
+                    form.reset();
+                })
+                .catch(error => {
+                    // Mostra messaggio di errore
+                    formResponse.classList.remove('hidden', 'bg-green-100', 'text-green-700');
+                    formResponse.classList.add('bg-red-100', 'text-red-700');
+                    formResponse.textContent = 'Si è verificato un errore durante l\'invio della richiesta. Riprova più tardi.';
+                    console.error('Errore:', error);
+                })
+                .finally(() => {
+                    // Riabilita il pulsante
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = 'Invia richiesta';
+                    
+                    // Rendi visibile la risposta
+                    formResponse.classList.remove('hidden');
+                    
+                    // Scorri alla risposta
+                    formResponse.scrollIntoView({ behavior: 'smooth' });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
